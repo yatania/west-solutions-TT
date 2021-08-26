@@ -4,10 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    >
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header container-fluid p-0">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand navbar__image" href="#">
+            <img
+              src="./images/Logo.png"
+              alt="Brand`s logo"
+              class="navbar__picture"
+            >
+          </a>
+          <button
+           class="navbar-toggler"
+           type="button"
+           data-bs-toggle="collapse"
+           data-bs-target="#navbarNavDropdown"
+           aria-controls="navbarNavDropdown"
+           aria-expanded="false"
+           aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Über Uns
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Produkte
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink2"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Peripherietechnik
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink3"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dienstleistungen
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Klimatechnik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Presse</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container main pb-xxl-0">
+      <div class="row m-0 main__row">
+        <div class="col-md-6 main__content">
+          <h1 class="main__title">
+            Luftkondensierte
+            Kältemaschinen
+            & Kaltwassersätze
+          </h1>
+          <span class="main__line"></span>
+          <div class="main__product d-md-none">
+            <img
+              src="./images/AirColledChillersSmall.png"
+              alt="Air Colled Chillers Small"
+              class="main__image"
+            >
+          </div>
+          <p class="main__info fw-bold">
+            Aufgrund der kompakten Bauart werden platzsparende luftkondensierte Kompressionskältemaschinen
+            (umgangsspr. „Kaltwassersätze“) vielseitig zur
+            Prozesskühlung und Gebäudeklimatisierung eingesetzt.
+          </p>
+          <span class="main__line d-none d-md-block"></span>
+        </div>
+        <div class="main__product d-none d-md-block col-md-6">
+          <img
+            src="./images/AirColledChillersSmall.png"
+            alt="Air Colled Chillers Small"
+            class="main__image img-fluid main__image--active"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="energy container">
+      <div class="row energy__row">
+        <div class="col-md-6 col-lg-7 evergy__picture">
+          <img
+            src="./images/MultistageMSW-MSA.png"
+            alt="Multistage MSW-MSA"
+            class="energy__image"
+          >
+        </div>
+        <div class="col-md-6 col-lg-5 energy__content">
+          <h2 class="energy__title">
+            ENERGIEEFFIZIENZ IM FOKUS
+          </h2>
+          <p class="energy__text">
+            Bei der Anschaffung sollte deshalb besonders auf <span class="energy__accent">energieeffiziente Systeme</span> geachtet werden, denn die Betriebskosten der Anlage überschreiten erfahrungsgemäß über die Lebensdauer hinweg die einmaligen Anschaffungskosten um ein vielfaches.
+          </p>
+          <p>
+            Insofern sind die Themen Kompressortechnik und Einsatz von Freikühlung von besonderer Bedeutung, sowie Steuer- und Regelungstechnik besonders wichtig.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="standarts">
+      <div class="container standarts__container">
+        <div class="row standarts__row">
+          <div class="col-md-5 col-xl-4 px-0 standarts__picture">
+            <img
+              src="./images/asv4sabu 3.png"
+              alt="Equipment"
+              class="standarts__image img-fluid"
+            >
+          </div>
+          <div class="d-none d-xl-block col-xl-2"></div>
+          <div class="col-md-7 col-xl-6 standarts__content">
+            <h3 class="standarts__title">MODERNSTE STANDARDS</h3>
+            <p class="standarts__text">
+              Aktuelle Richtlinien und Verordnungen bezüglich des <span class="standarts__accent">Kältemittel Phase-Downs</span> müssen berücksichtigt werden. Der langfristige Einsatz des Kältemittels muss sowohl nach ökonomischen als auch strategischen Gesichtspunkten entschieden werden.
+            </p>
+            <p class="standarts__text">
+              Alle unsere Kältemaschinen entsprechen dem modernsten Stand der Technik und werden in den unterschiedlichsten Branchen eingesetzt. Unser Angebot umfasst ein breites Sortiment an natürlichen und frigenen Kältemitteln, die den aktuellsten Normen und Verordnungen entsprechen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    >
+    </script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

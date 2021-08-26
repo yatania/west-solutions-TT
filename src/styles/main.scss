@@ -1,7 +1,223 @@
 @import "utils";
 @import "fonts";
-@import "typography";
 
-body {
-  background: $c-gray;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+.header {
+  width: 100%;
+  box-shadow: 0 0 21px rgba(64, 68, 75, 0.14);
+}
+
+.nav-item {
+  border: 2px solid transparent;
+  transition: border-color 500ms,
+    color 500ms,
+    border-radius 500ms;
+}
+
+.nav-item:hover {
+  color: #2e75ff;
+  border: 2px solid #eaedf5;
+  border-radius: 8px;
+}
+
+.navbar {
+  &__image {
+    width: 100px;
+    height: max-content;
+    padding: 0;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}
+
+.main {
+  padding: 56px 0 50px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include onDesktop {
+    padding: 108px 0;
+  }
+
+  &__title {
+    @extend %h1;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include onTablet {
+      text-align: left;
+    }
+
+    @include onDesktop {
+      max-width: 400px;
+    }
+  }
+
+  &__product {
+    @include onTablet {
+      max-height: 100%;
+    }
+  }
+
+  &__image {
+    display: inline-flex;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &--active {
+      max-height: max-content;
+    }
+
+    @include onDesktop {
+      max-height: 100%;
+      margin-top: -50px;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 227px;
+    text-align: center;
+    border: 7px solid #edeff3;
+    margin: 0 auto 20px;
+
+    @include onTablet {
+      margin-left: 0;
+    }
+
+    @include onDesktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info {
+    max-width: 515px;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.energy {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 0;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    @extend %h2;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      text-align-last: left;
+    }
+
+    @include onDesktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__accent {
+    @extend %accented;
+  }
+}
+
+.standarts {
+  @extend %h2;
+  letter-spacing: normal;
+  color: #fff;
+  background: linear-gradient(180deg, #163da2 0%, #003584 100%);
+
+  &__row {
+    display: flex;
+  }
+
+  &__picture {
+    width: 100%;
+    @include onTablet {
+      margin-left: -20px;
+    }
+
+    @include onDesktop {
+      margin-left: -30px;
+    }
+
+    @include onLargeScreen {
+      margin-left: -40px;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+
+    @include onTablet {
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    padding-top: 39px;
+    padding-bottom: 16px;
+  }
+
+  &__text {
+    letter-spacing: -0.4px;
+    font-weight: 400;
+    max-width: 500px;
+  }
+
+  &__accent {
+    @extend %accented;
+  }
+
+  &__content {
+    @include onTablet {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: "Reith Sans";
+  src: url("../fonts/BBCReithSans_W_Bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Reith Sans";
+  src: url("../fonts/BBCReithSans_W_Rg.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
