@@ -1,0 +1,48 @@
+.advantages {
+  &__title {
+    text-align: center;
+    @extend %h3;
+    margin-bottom: 42px;
+  }
+
+  &__row {
+    display: grid;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 56px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 360px);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, minmax(380px, 1fr));
+    }
+  }
+
+  &__card {
+    padding: 0 35px;
+    margin-bottom: 8px;
+    display: flex;
+    min-width: 100%;
+    height: 136px;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    transition: transform 500ms;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__image {
+    display: inline-flex;
+    margin-right: 30px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

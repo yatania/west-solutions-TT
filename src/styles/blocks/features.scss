@@ -1,0 +1,68 @@
+.features {
+  &__wrapper {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 0 16px 40px;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    text-align: center;
+    @extend %h3;
+    letter-spacing: 2px;
+    padding-top: 46px;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    @include onDesktop {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 400px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-left: 30px;
+    transition: color 500ms;
+
+    &:hover {
+      color: #0c5cd6;
+    }
+
+    @include onDesktop {
+      width: 45%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @for $i from 1 through 14 {
+      &:nth-child(#{$i}):before {
+        content: "#{$i}";
+        position: absolute;
+        top: 0;
+        left: -30px;
+        font-size: 10px;
+        border: 1px solid grey;
+        padding: 6px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        max-width: 10px;
+        max-height: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.footer {
+  padding: 50px 0;
+  color: #9eabbb;
+  height: 200px;
+
+  &__container {
+    width: 100%;
+
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  &__links {
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    cursor: pointer;
+    margin-bottom: 17px;
+  }
+
+  &__tel {
+    color: #7c848d;
+  }
+
+  &__title {
+    letter-spacing: -0.4px;
+    font-weight: 700;
+    color: #a3adba;
+  }
+
+  &__adress,
+  &__contact {
+    margin-bottom: 17px;
+  }
+}

@@ -1,0 +1,151 @@
+.products {
+
+  padding-bottom: 100px;
+
+  @include onTablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    @include onTablet {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @include onDesktop {
+      gap: 20px;
+    }
+  }
+
+  &__nav-link {
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: color 500ms;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__title {
+    @extend %h3;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__pictures {
+    max-height: 200px;
+  }
+
+  &__nav-item {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(180deg, #0c5cd6 0%,
+    rgba(0, 56, 140, 0) 100%),
+      #004fc7;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(48, 67, 133, 0.5);
+    border-radius: 12px;
+    transition: transform 500ms;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @include onTablet {
+        margin-bottom: 0;
+        margin-right: 5px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.slides {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 39px;
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  &__prev {
+    margin-right: 1rem;
+  }
+
+  &__prev,
+  &__next {
+    width: 126px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 0 21px rgba(64, 68, 75, 0.14);
+    border-radius: 8px;
+    border-color: transparent;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #003584;
+    }
+  }
+
+  &__dots {
+    margin-bottom: 20px;
+  }
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  max-width: min-content;
+
+  &__dot.active {
+    background-color: #004fc7;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #80abff;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

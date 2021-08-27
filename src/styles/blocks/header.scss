@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 21px rgba(64, 68, 75, 0.14);
+}
+
+.nav-item {
+  border: 2px solid transparent;
+  transition: border-color 500ms,
+    color 500ms,
+    border-radius 500ms;
+}
+
+.nav-item:hover {
+  color: #2e75ff;
+  border: 2px solid #eaedf5;
+  border-radius: 8px;
+}
+
+.navbar {
+  &__image {
+    width: 100px;
+    height: max-content;
+    padding: 0;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}

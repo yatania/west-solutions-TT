@@ -1,0 +1,46 @@
+.energy {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 0;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 500ms;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    @extend %h2;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      text-align-last: left;
+    }
+
+    @include onDesktop {
+      margin-bottom: 50px;
+    }
+  }
+}

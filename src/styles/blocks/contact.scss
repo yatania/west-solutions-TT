@@ -1,0 +1,67 @@
+.contact {
+  border: 1px solid #eef0f4;
+  background-color: #fff;
+  padding-top: 48px;
+  padding-bottom: 20px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include onDesktop {
+      order: 1;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 30px;
+    color: #fff;
+    background: linear-gradient(90deg, #0c5cd6 0%,
+    rgba(0, 56, 140, 0) 100%),
+      #004fc7;
+    background-position: right bottom;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(48, 67, 133, 0.5);
+    border-radius: 12px;
+    transition: transform 500ms,
+      background-color 500ms,
+      color 500ms;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 35%;
+  }
+}
